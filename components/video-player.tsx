@@ -179,7 +179,7 @@ export const VideoPlayer: React.FC<CustomVideoPlayerProps> = ({ videoSrc }) => {
           ${showControls ? 'opacity-100' : 'opacity-0'}
         `}>
         <div className="flex items-center justify-between">
-          <button onClick={togglePlay} className="p-1 bg-transparent border-none cursor-pointer flex items-center justify-center mr-0 text-inherit">
+          <button aria-label="play button" onClick={togglePlay} className="p-1 bg-transparent border-none cursor-pointer flex items-center justify-center mr-0 text-inherit">
             {isPlaying ? <Pause size={20} /> : <Play size={20} />}
           </button>
           <input
@@ -191,7 +191,7 @@ export const VideoPlayer: React.FC<CustomVideoPlayerProps> = ({ videoSrc }) => {
             className={`w-full mx-2 cursor-pointer`}
           />
           <div className="flex items-center">
-            <button onClick={toggleMute} className="p-1">
+            <button aria-label="volume button" onClick={toggleMute} className="p-1">
               {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
             </button>
             <input
@@ -203,7 +203,7 @@ export const VideoPlayer: React.FC<CustomVideoPlayerProps> = ({ videoSrc }) => {
               onChange={handleVolumeChange}
               className="w-16 mx-2"
             />
-            <button onClick={toggleFullscreen} className="p-1">
+            <button aria-label="fullscreen button" onClick={toggleFullscreen} className="p-1">
               {isFullscreen ? <Minimize size={20} /> : <Maximize size={20} />}
             </button>
           </div>
