@@ -8,25 +8,25 @@ import { ThemeProvider } from 'next-themes'
 
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://rasmic.xyz"),
+  metadataBase: new URL("https://html-blog.rasmic.xyz"),
   title: {
-    default: 'Ras Mic',
-    template: `%s | Ras Mic`
+    default: 'HTML Blog',
+    template: `%s | HTML Blog`
   },
-  description: 'Michael Shimeles (Ras Mic) is a Full Stack Engineer, with experience building production web applications that scale.',
+  description: 'Set up HTML rendering for blog content in Next.js, moving away from Markdown to a more flexible HTML-based approach.',
   openGraph: {
-    description: 'Michael Shimeles (Ras Mic) is a Full Stack Engineer, with experience building production web applications that scale.',
-    images: ['https://bp26mqjoy5krq52s.public.blob.vercel-storage.com/cover-IyiM4KsixDygfvo6k9xZP5LMmjSb6q.png'],
-    url: 'https://rasmic.xyz/'
+    description: 'Set up HTML rendering for blog content in Next.js, moving away from Markdown to a more flexible HTML-based approach.',
+    images: ['https://utfs.io/f/7b032369-edf0-4248-af33-891f8e356f92-k8z3io.png'],
+    url: 'https://html-blog.rasmic.xyz/'
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ras Mic',
-    description: 'Michael Shimeles (Ras Mic) is a Full Stack Engineer, with experience building production web applications that scale.',
+    title: 'HTML Blog',
+    description: 'Set up HTML rendering for blog content in Next.js, moving away from Markdown to a more flexible HTML-based approach.',
     creator: "@rasmickyy",
-    images: ['https://bp26mqjoy5krq52s.public.blob.vercel-storage.com/cover-IyiM4KsixDygfvo6k9xZP5LMmjSb6q.png'],
+    images: ['https://utfs.io/f/7b032369-edf0-4248-af33-891f8e356f92-k8z3io.png'],
   },
-  keywords: ['Michael Shimeles, Ras Mic'],
+  keywords: ['Michael Shimeles, Ras Mic', 'HTML Blog Rendering'],
 }
 export default function RootLayout({
   children,
@@ -35,13 +35,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <link
-          rel="preload"
-          href="https://utfs.io/f/6cccb5f9-f7e6-4abf-a35f-4c1df51713c4-5cxw4y.jpg"
-          as="image"
-        />
-      </head>
       <body className={GeistSans.className}>
         <Provider>
           <ThemeProvider

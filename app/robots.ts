@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://rasmic.xyz/sitemap.xml',
+    sitemap: 'https://html-blog.rasmic.xyz/sitemap.xml',
   }
 }

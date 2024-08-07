@@ -20,7 +20,7 @@ type SitemapEntry = {
 };
 
 export default async function sitemap(): Promise<SitemapEntry[]> {
-  const baseUrl = "https://rasmic.xyz";
+  const baseUrl = "https://html-blog.rasmic.xyz";
 
   const blogPosts: SitemapEntry[] = blogs.map((post: BlogPost) => ({
     url: `${baseUrl}/blog/${post.slug}`,
