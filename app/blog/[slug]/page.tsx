@@ -43,7 +43,7 @@ export async function generateStaticParams() {
 
 export default async function Blog({ params }: { params: { slug: string } }) {
 
-  const response = await getBlogs(params?.slug)
+  const response = getBlogs(params?.slug)
   return (
     <PageWrapper>
       <article className="container relative max-w-3xl mt-[4rem]">
