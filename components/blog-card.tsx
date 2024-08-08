@@ -44,7 +44,7 @@ export default function BlogCard({ title, description, image }: {
       <div
         className="absolute inset-0 z-0 transition-opacity duration-300 ease-in-out"
         style={{
-          background: `radial-gradient(circle 150px at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,0.1), transparent 80%)`,
+          background: `radial-gradient(circle 150px at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,0.2), transparent 80%)`,
           opacity: isHovered ? 1 : 0,
           pointerEvents: 'none',
         }}
