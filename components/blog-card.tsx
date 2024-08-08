@@ -3,20 +3,30 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import { useRef, useState } from "react"
 
-export default function ProjectCard({ title, description, image }: {
+// Define the props for the BlogCard component
+export default function BlogCard({ title, description, image }: {
   title: string,
   description: string,
   image: string
 }) {
+  // Create a ref for the card element
   const ref = useRef<HTMLDivElement>(null)
+  // State to track mouse position relative to the card
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  // State to track whether the card is being hovered
   const [isHovered, setIsHovered] = useState(false)
 
+  // Function to handle mouse movement over the card
   function handleMouseMove(event: React.MouseEvent<HTMLDivElement>) {
+    // Get the bounding rectangle of the current element
     const rect = ref.current?.getBoundingClientRect()
+
+    // If we successfully got the rectangle
     if (rect) {
+      // Calculate the mouse position relative to the element
       const x = event.clientX - rect.left
       const y = event.clientY - rect.top
+      // Update the state with the new mouse position
       setMousePosition({ x, y })
     }
   }
@@ -27,9 +37,10 @@ export default function ProjectCard({ title, description, image }: {
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      whileHover={{ scale: 1.03 }}
+      whileHover={{ scale: 1.03 }} // Slightly increase size on hover
       className="relative w-full rounded-2xl border border-zinc-900 hover:cursor-pointer overflow-hidden"
     >
+      {/* Radial gradient overlay that follows the mouse */}
       <div
         className="absolute inset-0 z-0 transition-opacity duration-300 ease-in-out"
         style={{
@@ -38,15 +49,18 @@ export default function ProjectCard({ title, description, image }: {
           pointerEvents: 'none',
         }}
       />
+      {/* Card content */}
       <div className="relative z-10 p-3">
+        {/* Image container */}
         <div className="relative w-full aspect-[16/9] rounded overflow-hidden">
           <Image
             src={image}
-            alt="Project thumbnail"
+            alt="Blog thumbnail"
             fill
             className="object-cover object-center"
           />
         </div>
+        {/* Text content */}
         <div className="flex flex-col gap-1 mt-2">
           <p className="text-sm text-gray-300">{title}</p>
           <p className="text-xs text-gray-400">{description}</p>
