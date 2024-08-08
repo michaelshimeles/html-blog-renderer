@@ -39,12 +39,13 @@ This project demonstrates how to set up HTML rendering for blog content in Next.
 
 ### Project Structure
 
-- `article.ts`: Defines the blog data structure and content
-- `getAllBlogSlugs.ts`: Utility function to get all blog slugs
-- `getBlogs.ts`: Utility function to fetch blog data
+- `content/article.ts`: Defines the blog data structure and content
+- `content/functions/getAllBlogSlugs.ts`: Utility function to get all blog slugs
+- `content/functions/getBlogs.ts`: Utility function to fetch blog data
 - `app/blog/[slug].tsx`: Dynamic page component for rendering individual blog posts
 - `components/BlogCard.tsx`: Component for displaying blog previews
 - `components/BlogCardSection.tsx`: Component for rendering a grid of blog cards
+- `content/articles/`: This is where the articles are stored in html as a jsx/tsx file
 
 ## Usage
 
@@ -53,6 +54,8 @@ This project demonstrates how to set up HTML rendering for blog content in Next.
 Add your blog posts in the `article.ts` file:
 
 ```typescript
+import { data_fetching_article } from "./articles/data-fetching";
+
 export const blogs = [
   {
     id: 0,
@@ -68,7 +71,11 @@ export const blogs = [
   },
   // Add more blog posts here
 ];
+```
 
+Add your blog posts in the `content/articles` folder and name it `data-fetching.tsx`:
+
+```typescript
 export const data_fetching_article = `
   <h1>Data Fetching in Modern Web Applications</h1>
   <p>Data fetching is a crucial aspect of building modern web applications...</p>
