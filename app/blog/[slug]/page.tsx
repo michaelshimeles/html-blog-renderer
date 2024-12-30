@@ -7,7 +7,8 @@ import { ChevronLeft } from 'lucide-react';
 import Link from 'next/link';
 import ReactHtmlParser from 'react-html-parser';
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params;
   try {
     const response = getBlogs(params?.slug)
 
@@ -41,7 +42,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function Blog({ params }: { params: { slug: string } }) {
+export default async function Blog(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params;
 
   const response = getBlogs(params?.slug)
   return (
