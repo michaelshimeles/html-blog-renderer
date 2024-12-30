@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import BlogCard from './blog-card'
 import { blogs } from '@/content/article'
-import { Separator } from './ui/separator'
+import { Separator } from '../ui/separator'
 
 export default function BlogCardSection() {
 

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { BorderBeam } from './magicui/border-beam';
+import { BorderBeam } from '../magicui/border-beam';
 
 const FloatingBadge = () => {
   return (

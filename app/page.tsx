@@ -1,5 +1,5 @@
-import BlogCardSection from "@/components/blog-card-section";
-import FloatingBadge from "@/components/floating-badge";
+import BlogCardSection from "@/components/blog/blog-card-section";
+import FloatingBadge from "@/components/badge/floating-badge";
 import { Separator } from "@/components/ui/separator";
 import { VideoPlayer } from "@/components/video-player";
 import PageWrapper from "@/components/wrapper/page-wrapper";

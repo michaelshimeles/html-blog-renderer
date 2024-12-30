@@ -10,10 +10,10 @@ import { ThemeProvider } from 'next-themes'
 export const metadata: Metadata = {
   metadataBase: new URL("https://html-blog.rasmic.xyz"),
   title: {
-    default: 'HTML Blog',
-    template: `%s | HTML Blog`
+    default: 'HTML',
+    template: `%s | HTML`
   },
-  description: 'Set up HTML rendering for blog content in Next.js, moving away from Markdown to a more flexible HTML-based approach.',
+  description: 'Set up HTML rendering for blog content in Next.js 15, moving away from Markdown to a more flexible HTML-based approach.',
   openGraph: {
     description: 'Set up HTML rendering for blog content in Next.js, moving away from Markdown to a more flexible HTML-based approach.',
     images: ['https://utfs.io/f/7b032369-edf0-4248-af33-891f8e356f92-k8z3io.png'],

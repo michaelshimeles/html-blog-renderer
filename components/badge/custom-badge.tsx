@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function customBadge({ tech }: { tech: string }) {
+export default function CustomBadge({ tech }: { tech: string }) {
   return (
     <span className="relative inline-flex items-center px-3 py-1 rounded-full text-xs font-medium text-white shadow-lg overflow-hidden">
       <span className="absolute inset-0 bg-zinc-950 opacity-80"></span>
